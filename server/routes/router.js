@@ -26,7 +26,6 @@ route.get('/add-advertisement', services.add_adv)
  */
 route.get('/update-user', services.update_user)
 
-
 // API
 route.get('/api/users', adduser.find);
 route.get('/api/advertisements', advertisement.find);

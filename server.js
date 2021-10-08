@@ -12,7 +12,7 @@ dotenv.config( { path : 'config.env'} )
 const PORT = process.env.PORT || 8080
 
 // log requests
-app.use(morgan('log updated (coucou)'));
+//app.use(morgan('log updated (coucou)'));
 
 // mongodb connection
 connectDB();

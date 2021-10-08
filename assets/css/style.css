@@ -244,3 +244,10 @@ table{
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     margin:20px;
   }
+
+  .index {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin:20px;
+  }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Wars advertisements App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <a href="login.ejs">Login</a>
+    <h1 data-position="header">Indeed du pauvre</h1>
+
+    <section data-position="add-advertisements">
+      <h2>Add an advertisement</h2>
+
+      <form action="/advertisements" method="POST">
+        <input type="text" placeholder="Nom" name="name"/>
+        <input type="text" placeholder="Lieu" name="place"/>
+        <input type="number" placeholder="Salaire" name="salary"/>
+        <input type="text" placeholder="Description" name="description"/> 
+        <textarea placeholder="Description détaillée" rows="10" cols="80" name="detailed_description"/></textarea>
+        <!--<input class="flip" onclick="displayBlock()" name="detailed_description">Learn More</p>-->
+        <button type="submit">Submit your Job</button>
+      </form>
+    </section>
+    <section data-position="update-advertisements">
+      <div>
+        <h2>Darth Vadar invades!</h2>
+        <p>
+          Replace first Yoda's quote with a quote written by Darth Vadar
+        </p>
+        <button id="update-button">Replace Yoda's quote</button>
+      </div>
+    </section>
+
+    <section data-position="delete-advertisements">
+      <div>
+        <h2>Remove Darth Vadar!</h2>
+        <p>
+          Delete one Darth Vadar's quote. Does nothing if there are no more
+          Darth Vadar's quote
+        </p>
+        <button id="delete-button">Delete Darth Vadar's quote</button>
+      </div>
+      <div id="message"></div>
+    </section>
+
+    <section data-position="advertisements">
+      <h2>Jobs</h2>
+
+        <% for(var i = 0; i < advertisements.length; i++) {%>
+        <div class="annonces">
+          <p><%= advertisements[i].place %></p>
+          <p><%= advertisements[i].name %></p>        
+          <p><%= advertisements[i].salary %>€</p>
+          <p><%= advertisements[i].description %></p>
+          <div id="<% advertisements[i].id_advertisements %>" class="moreInfo">
+            <p><%= advertisements[i].detailed_description %></p>
+   </div> 
+
+<button onclick="myFunction()" id="myBtn">Learn More</button>
+        </div>
+        <% } %>
+
+    </section>
+    <script src="/js"></script>
+  </body>
+</html>
