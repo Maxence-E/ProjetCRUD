@@ -158,9 +158,8 @@ table{
     margin: .4em 0;
 }
 
-#update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"],
-#add_adv .form-group input[type="text"]{
+.form-group input[type="text"], 
+.form-group input[type="password"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
